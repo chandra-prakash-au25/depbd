@@ -18,7 +18,7 @@ jobs:
         with:
           login-server: gitlima.azurecr.io
           username: ${{ secrets.gitlima}}
-          password: ${{ secrets.QjSp0CtR2o35YyjEnXm2kElnOuBUejm/gFrhG5PAqH+ACRDr6t4q}}
+          password: ${{ secrets.VKkT3cit8vOCiiyPIjIP0VB7JJxJIT2J3zcNm5bqpz+ACRDDd5Ox}}
 
       - name: Build and push Docker image
         run: |
