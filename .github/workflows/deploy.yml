@@ -1,0 +1,28 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Azure Container Registry
+        uses: azure/docker-login@v1
+        with:
+          login-server: gitlima.azurecr.io
+          username: ${{ secrets.gitlima}}
+          password: ${{ secrets.QjSp0CtR2o35YyjEnXm2kElnOuBUejm/gFrhG5PAqH+ACRDr6t4q}}
+
+      - name: Build and push Docker image
+        run: |
+          docker build . -t gitlima.azurecr.io/gitlima:latest
+          docker push gitlima.azurecr.io/gitlima:latest
+
+      # Add more steps as needed for deployment to Azure Container Instances
