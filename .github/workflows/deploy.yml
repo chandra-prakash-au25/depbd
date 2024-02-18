@@ -25,4 +25,4 @@ jobs:
           docker build . -t gitlima.azurecr.io/gitlima:latest
           docker push gitlima.azurecr.io/gitlima:latest
 
-      # Add more steps as needed for deployment to Azure Container Instances
+
