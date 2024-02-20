@@ -17,8 +17,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: gitlima.azurecr.io
-          username: ${{ secrets.gitlima}}
-          password: ${{ secrets.VKkT3cit8vOCiiyPIjIP0VB7JJxJIT2J3zcNm5bqpz+ACRDDd5Ox}}
+          username: ${{ secrets.USER_NAME}}
+          password: ${{ secrets.PASSWORD}}
 
       - name: Build and push Docker image
         run: |
